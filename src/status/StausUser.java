@@ -11,18 +11,26 @@ package status;
  */
 public class StausUser 
 {
+   public enum Level {ZERO,ONE,TWO,THREE};
    public void statusDetail(String code)
 {
-switch(code.toUpperCase())
+    Level cas = Level.ZERO; 
+    Level[] vals = Level.values();
+    for (Level l : vals){
+        
+        if (l.toString().equals(code.toUpperCase()))
+        {cas=l;}
+    }
+switch(cas)
         {
-        case "ZERO": System.out.println("REJECTED");
+        case ZERO: System.out.println("REJECTED");
         break;
-        case "ONE": System.out.println("PENDING");
+        case ONE : System.out.println("PENDING");
         break;
-        case "TWO":
+        case TWO:
         System.out.println("PROCESSING");
         break;
-        case "THREE": 
+        case THREE: 
             System.out.println("APPROVED");
         break;
         default:
