@@ -11,10 +11,10 @@ package status;
  */
 public class StausUser 
 {
-   public enum Level {ZERO,ONE,TWO,THREE};
+   public enum Level {ZERO,ONE,TWO,THREE,DEFAULT};
    public void statusDetail(String code)
 {
-    Level cas = Level.ZERO; 
+    Level cas = Level.DEFAULT; 
     Level[] vals = Level.values();
     for (Level l : vals){
         
